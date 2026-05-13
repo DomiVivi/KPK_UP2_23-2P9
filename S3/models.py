@@ -14,7 +14,6 @@ class Role(BaseModel):
     is_active = BooleanField(default=True)
 
 class User(BaseModel):
-    id = IntegerField()
     id_role = ForeignKeyField(Role, backref='user_roles')
 
 def createTable():
